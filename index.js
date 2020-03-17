@@ -190,9 +190,18 @@ function lowerCaseStrings(strings) {
  * 
  * [2] Invoking `isItAnApple` with `['a', 'b', 'c' ]` will return `[ false, false, false ]`.
 */
-function isItAnApple(/* code here */) {
+function isItAnApple(strings) {
   /* code here */
+  const newArr = strings.map((arrItem)=>{
+    if(arrItem === 'apple'){
+      return true;
+    }else {
+      return false;
+    }
+  });
+    return newArr;
 }
+
 
 /**
  * ### Challenge `removeApple`
@@ -210,8 +219,15 @@ function isItAnApple(/* code here */) {
  * 
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
-function removeApple(/* code here */) {
+function removeApple(strings) {
   /* code here */
+  let newArr = strings.filter((arrItem)=>{
+    if(arrItem !== 'apple'){
+      return arrItem;
+    };
+
+  });
+  return newArr;
 }
 
 /**
@@ -229,8 +245,12 @@ function removeApple(/* code here */) {
  * 
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
-function stringSmash(/* code here */) {
+function stringSmash(strings) {
   /* code here */
+  let newArr = strings.reduce((accum, arrItem)=>{
+      return accum+arrItem;
+  }, );
+  return(newArr); 
 }
 
 // A local community center is holding a fund raising 5k fun run and has invited
