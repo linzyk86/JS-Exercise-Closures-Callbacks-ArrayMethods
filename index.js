@@ -224,7 +224,7 @@ function removeApple(strings) {
   let newArr = strings.filter((arrItem)=>{
     if(arrItem !== 'apple'){
       return arrItem;
-    };
+    }
 
   });
   return newArr;
@@ -249,7 +249,7 @@ function stringSmash(strings) {
   /* code here */
   let newArr = strings.reduce((accum, arrItem)=>{
       return accum+arrItem;
-  }, );
+  });
   return(newArr); 
 }
 
@@ -268,8 +268,14 @@ function stringSmash(strings) {
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
+
+
+function getFullNames(runners) {
   /* CODE HERE */
+  const fullNames = runners.map((runner)=>{
+    return `${runner.last_name}, ${runner.first_name}`;
+  });
+  return fullNames;
 }
 
 /**
@@ -284,9 +290,15 @@ function getFullNames(/* CODE HERE */) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
+function firstNamesAllCaps(runners) {
   /* CODE HERE */
+  let newArr = runners.map((runner)=>{
+      let cap = runner.first_name;
+      return cap.toUpperCase();
+  })
+  return newArr;
 }
+
 
 /**
  * ### Challenge `getRunnersByTShirtSize`
